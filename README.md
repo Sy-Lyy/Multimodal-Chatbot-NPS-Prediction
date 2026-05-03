@@ -10,7 +10,7 @@ Built during an internship at **LG Electronics Netherlands** and extended into a
 
 Large-scale customer-service chatbots generate thousands of sessions daily, but most users never fill out a post-chat satisfaction survey. This project builds a model to predict session-level NPS (0–10) directly from interaction logs — surfacing dissatisfaction signals for non-responding users.
 
-The core finding: **conversation text alone is nearly useless for NPS prediction in this setting.** Behavioural signals (engagement, escalation, platform) drive the improvement.
+The core finding: **In customer-service chatbot settings, conversation text alone provides limited predictive signal for NPS.** Combining text with behavioural features — engagement, escalation, and platform — drives meaningful improvement.
 
 ---
 
@@ -41,20 +41,18 @@ Late fusion combining a multilingual text encoder (XLM-RoBERTa, 768-d) with a 2-
 ```
 ├── README.md
 ├── assets/
-│   └── architecture.png
+│   └── model_architecture.png
 ├── src/
 │   ├── preprocess/
 │   │   ├── 01_eda_and_cleaning.py
 │   │   ├── 02_session_features.py
 │   │   └── 03_chunking_xlmr.py
 │   ├── modeling/
-│   │   ├── dataset.py
-│   │   ├── models.py
-│   │   └── train.py
+│   │   └── Unimodal & Multimodal NPS Modeling Pipeline.py
 │   └── analysis/
-│       ├── main_sub_rq1.py
-│       ├── sub_rq2.py
-│       └── sub_rq3.py
+│       ├── evaluation.py
+│       ├── subgroup_analysis.py
+│       └── feature_importance.py
 ```
 
 ---
