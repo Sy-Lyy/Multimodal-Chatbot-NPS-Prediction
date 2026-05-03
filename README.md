@@ -30,7 +30,7 @@ The analysis surfaced two actionable dissatisfaction profiles: sessions with ear
 
 ## Model Architecture
 
-![Model Architecture](assets/architecture.png)
+![Model Architecture](assets/model_architecture.png)
 
 Late fusion combining a multilingual text encoder (XLM-RoBERTa, 768-d) with a 2-layer behavioural MLP (5→32-d), concatenated and fed into a linear regression head. Trained end-to-end with AdamW and MAE loss.
 
