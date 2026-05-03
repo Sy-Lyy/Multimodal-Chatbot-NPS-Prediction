@@ -19,7 +19,6 @@ For each of the 10 subgroups, the best unimodal and multimodal models were evalu
 
 """
 
-# RQ2 — Subgroup performance comparison
 # Δ = MAE_uni - MAE_multi
 
 import random
