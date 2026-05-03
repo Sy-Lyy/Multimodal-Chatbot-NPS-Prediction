@@ -1,7 +1,7 @@
-# Main RQ
+# 
 How effectively does a transformer-based multimodal model incorporating text and behavioral features outperform a unimodal transformer text model in predicting NPS?
 
-# Sub-RQ1
+# 
 How much predictive gain is achieved by augmenting an XLM-RoBERTa text model with behavioral features in a multimodal architecture for NPS prediction?
 
 - Test MAE is compared among Baseline, Unimodal, and Multimodal models.
@@ -216,7 +216,7 @@ print("\n===== EVALUATE BEST MODELS (TEST SET) =====")
 uni_y_true, uni_y_pred, uni_mae = eval_unimodal(uni_model, test_loader)
 multi_y_true, multi_y_pred, multi_mae = eval_multimodal(multi_model, test_loader)
 
-# 두 모델이 같은 세션 순서인지 체크 (문제 없으면 True)
+# 
 assert np.allclose(uni_y_true, multi_y_true)
 y_true = multi_y_true
 
